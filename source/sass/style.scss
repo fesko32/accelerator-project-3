@@ -1,4 +1,20 @@
-// Vendor
+/* VENDOR */
+// ---------------------------------
+@import "vendor/normalize";
+@import  'swiper/css';
+@import  'swiper/css/pagination';
+
 // ---------------------------------
 
-@import "vendor/normalize";
+/* GLOBAL */
+// ---------------------------------
+@import "global/variables.scss";
+@import "global/mixins.scss";
+@import "global/fonts.scss";
+@import "global/global.scss";
+// ---------------------------------
+
+/* BLOCK */
+// ---------------------------------
+@import "block/hero.scss";
+// ---------------------------------

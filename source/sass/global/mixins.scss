@@ -1,0 +1,22 @@
+@mixin font-face($font-family, $font-weight, $font-style, $font-srcs) {
+  @font-face {
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-style: $font-style;
+    src:
+      url("#{nth($font-srcs, 1)}") format("woff2"),
+      url("#{nth($font-srcs, 2)}") format("woff");
+  }
+}
+@mixin vp-768 {
+  @media (min-width: $tablet-width) {
+    @content;
+  }
+}
+
+
+@mixin vp-1440 {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
+}
