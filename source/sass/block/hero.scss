@@ -122,23 +122,25 @@
   width: 100%;
   display: none;
   flex-direction: column;
-  gap: 28px;
+  gap: 23px;
   background-color: transparent;
   border-radius: 16px;
   margin: 0;
-  padding: 35px 25px;
+  padding: 33px 25px;
   position: absolute;
   z-index: 2;
-   transition: .3s ease;
+  transition: .3s ease;
 }
 
-.hero__list.active {
+.hero__list.is-open {
   display: flex;
   background-color: $additional-light-blue;
 
   .hero__item {
     width: max-content;
   }
+
+
 }
 .hero__item {
   width: 108px;
@@ -154,34 +156,30 @@
 
 }
 
-.hero__item:has(.hero__sublist) > .hero__link {
-  opacity: 0.7;
-  position: relative;
-
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    width: 7px;
-    height: 1px;
-    background-color: $absolute-white;
-    top: 8px;
-    transition: transform .1s ease-out, opacity .1s ease-out;
-
-  }
-
-  &::before {
-    transform: rotate(40deg);
-    right: -12px;
-  }
-  &::after {
+.hero__item.active {
+  .hero__link-element::before{
     transform: rotate(-40deg);
-    right: -17px;
+  }
+
+  .hero__link-element::after{
+    transform: rotate(40deg);
+  }
+
+  .hero__link:hover,
+  .hero__link:focus {
+    opacity: 0.9;
   }
 }
 
+.hero__item:has(.hero__sublist) > .hero__link {
+  // opacity: 0.7;
+}
+
+
 .hero__link {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-weight: 500;
   font-size: 16px;
   line-height: 100%;
@@ -190,7 +188,33 @@
   text-decoration: none;
   color: $absolute-white;
   opacity: 0.7;
-  // transition: .4s ease;
+
+  .hero__link-element {
+    display: block;
+    width: 15px;
+    height: 15px;
+    position: relative;
+  }
+  .hero__link-element::before,
+  .hero__link-element::after {
+
+    content: "";
+    position: absolute;
+    width: 9px;
+    height: 1px;
+    background-color: $absolute-white;
+    top: 6px;
+    transition: .3s transform ease;
+  }
+
+  .hero__link-element::before {
+    transform: rotate(40deg);
+    right: 7px;
+  }
+  .hero__link-element::after {
+    transform: rotate(-40deg);
+    right: 0px;
+  }
 
   &:hover,
   &:focus {
@@ -199,22 +223,54 @@
   }
 
   &:focus {
-    // outline: none;
+
   }
 }
 
 
 .hero__sublist {
-  display: none;
 
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0;
+  padding: 0;
+  transform: translate(16px, 16px);
+  pointer-events: none;
+
+  .hero__link {
+    font-weight: 400;
+    text-transform: none;
+    opacity: 0.6;
+  }
 }
 
-.hero__sublist.active {
-  display: block;
+.hero__sublist.is-open {
+  // position: relative;
+  // display: flex;
+  // padding: 16px 0 0 0;
+  // height: auto;
+  // width: auto;
+  // opacity: 1;
+    max-height: 500px; // или можно через JS выставлять scrollHeight
+  opacity: 1;
+  margin-bottom: 19px;
+  pointer-events: auto;
+  .hero__subitem {
+    letter-spacing: normal;
+  }
+  .hero__link {
+    letter-spacing: normal;
+  }
 }
 
 .hero__subitem {
   list-style: none;
+  letter-spacing: normal;
 }
 .hero__swiper {
   position: relative;
