@@ -1,6 +1,7 @@
 /* VENDOR */
 // ---------------------------------
 @import "vendor/normalize";
+@import "vendor/nebo";
 @import  'swiper/css';
 @import  'swiper/css/pagination';
 
@@ -8,6 +9,7 @@
 
 /* GLOBAL */
 // ---------------------------------
+@import "global/visually-hidden.scss";
 @import "global/variables.scss";
 @import "global/mixins.scss";
 @import "global/fonts.scss";

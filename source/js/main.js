@@ -1,11 +1,11 @@
-// https://swiperjs.com/get-started#installation
-// import Swiper from "swiper";
-// import {Navigation, Pagination} from "swiper/modules";
-// import 'swiper/css';
+import { swiperHero } from './hero-swiper';
+
 const buttonElement = document.querySelector('.hero__menu-button');
 const listElement = document.querySelector('.hero__list');
 const heroElement = document.querySelector('.hero__inner-wrap');
 const heroItems = listElement.querySelectorAll('.hero__item');
+const heroMenu = document.querySelector('.hero__menu');
+
 
 buttonElement.addEventListener('click', (evt) => {
   evt.stopPropagation();
@@ -18,11 +18,8 @@ buttonElement.addEventListener('click', (evt) => {
 const bodyElement = document.body;
 
 bodyElement.addEventListener('click', (evt) => {
-  // Если клик по кнопке или по открытому списку — не закрываем
-  if (
-    buttonElement.contains(evt.target) ||
-    listElement.contains(evt.target)
-  ) {
+  // по открытому списку — не закрываем
+  if (listElement.contains(evt.target)) {
     // Если это клик по ссылке в подменю — закрываем всё
     if (evt.target.closest('.hero__subitem .hero__link')) {
       closeAllSubmenus();
@@ -67,3 +64,4 @@ function closeAllSubmenus() {
   allSublists.forEach((sublist) => sublist.classList.remove('is-open'));
 
 }
+
