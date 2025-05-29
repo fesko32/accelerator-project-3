@@ -1,0 +1,136 @@
+.button {
+  display: inline-flex;
+  justify-content: flex-start;
+  padding: 16px 59px 16px 21px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  color: $additional-light-blue;
+  border: 1px solid $additional-light-blue;
+  border-radius: 44px;
+  position: relative;
+  background-color: transparent;
+  transition: 0.3s ease;
+
+  @include vp-768 {
+    font-size: 14px;
+    padding: 21px 82px 19px 28px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 34px;
+    height: 34px;
+    background-color: #316DC2;
+    border-radius: 100%;
+    top: 5px;
+    right: 5px;
+    transition: 0.3s ease;
+
+    @include vp-768 {
+      width: 46px;
+      height: 46px;
+      top: 4px;
+      right: 4px;
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 8px;
+    height: 8px;
+    right: 18px;
+    top: 18px;
+    background-color: #ffffff;
+    mask-image: url("/__spritemap#sprite-arrow-view");
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    transition: 0.3s ease;
+
+    @include vp-768 {
+      width: 9px;
+      height: 9px;
+      right: 23px;
+      top: 23px;
+    }
+  }
+
+  &:hover {
+    background-color: $additional-light-blue;
+    color: $absolute-white;
+  }
+  &:hover::before {
+     background-color: $absolute-white;
+  }
+
+  &:hover::after {
+    background-color: $additional-light-blue;
+    transform: rotate(45deg);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus::before {
+    background-color: $additional-light-blue;
+  }
+
+   &:focus::after {
+    background-color: $absolute-white;
+    transform: rotate(45deg);
+  }
+
+  &:active {
+    background-color: $additional-light-blue;
+    color: rgba($absolute-white, .7);
+  }
+
+  &:active::before{
+    background-color: $absolute-white;
+  }
+
+  &:active::after{
+    background-color: rgba($additional-light-blue, .7);
+    transform: rotate(45deg);
+  }
+
+  &--disabled {
+    cursor: not-allowed;
+    color: $state-disabled;
+    border-color: $state-disabled;
+    background-color: transparent;
+
+    &::before {
+      background-color: $state-disabled;
+    }
+    &::after {
+      background-color: rgba($absolute-white, .6);
+    }
+  }
+
+  &--disabled:hover,
+  &--disabled:focus,
+  &--disabled:active {
+    cursor: not-allowed;
+    color: $state-disabled;
+    border-color: $state-disabled;
+    background-color: transparent;
+
+    &::before {
+      background-color: $state-disabled;
+    }
+    &::after {
+      background-color: rgba($absolute-white, .6);
+      transform: rotate(0deg);
+    }
+  }
+}

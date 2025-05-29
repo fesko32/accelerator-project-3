@@ -349,8 +349,8 @@ position: absolute;
 
 .hero__title-wrap {
     background-color: $absolute-white;
-    border-radius: 12px 14px 0px 0px;
-    padding: 50px 0 0px 14px;
+    border-radius: 0 14px 0px 0px;
+    padding: 23px 0 0px 14px;
     --nb-w: 186px;
     --nb-h: 4px;
     --nb-r: 12px;
@@ -591,12 +591,24 @@ position: absolute;
 .hero__pagination.swiper-pagination {
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 80px;
-    height: 28px;
-    top: 1px;
-    left: 15px;
-    gap: 4px;
+    justify-content: flex-start;
+    border-radius: 12px 12px 0 0;
+    padding: 10px 10px 10px 16px;
+    gap: 12px;
+    background-color: $absolute-white;
+
+    position: relative;
+    margin-bottom: -8px;
+    --nb-w: 188px;
+    --nb-h: 6px;
+    --nb-r: 11px;
+
+    .swiper-pagination-bullet {
+      display: block;
+      width: 8px;
+      height: 8px;
+      margin: 0;
+    }
 }
 
 .hero__promo-inner-wrap {
