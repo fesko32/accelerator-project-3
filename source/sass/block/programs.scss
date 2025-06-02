@@ -3,21 +3,33 @@
   padding-top: 50px;
   padding-bottom: 50px;
 }
+
+.programs__title-wrap {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 34px 0;
+}
 .container {
 }
 .programs__title {
   font-size: 20px;
   line-height: 100%;
   color: $additional-light-blue;
-  margin: 0 0 34px 0;
+  margin: 0;
 }
 .programs__swiper {
+  margin: 0 0 30px 0;
 }
 .swiper {
 }
 .programs__swiper-list {
+  display: flex;
   padding: 0;
   margin: 0;
+
+
 }
 .swiper-wrapper {
 }
@@ -28,7 +40,14 @@
   min-height: 400px;
   list-style: none;
   position: relative;
+  border-radius: 12px;
+
+  @include vp-768 {
+    min-height: 420px;
+  }
 }
+
+
 .programs__image-wrap {
   position: absolute;
   width: 100%;
@@ -48,9 +67,9 @@
   margin-bottom: 17px;
   margin-left: 10px;
   z-index: 0;
+  margin-right: 10px;
   p {
-    width: 270px;
-    padding: 12px 77px 15px 18px;
+    width: 175px;
     font-size: 12px;
     line-height: 117%;
     margin: 0;
@@ -67,10 +86,82 @@
   background-color: $absolute-white;
   border-radius: 12px 12px 0 0;
   color: $additional-light-blue;
-  --nb-w: 108px;
-  --nb-h: 18px;
-  --nb-r: 12px;
+    --nb-w: 95px;
+    --nb-h: 13px;
+    --nb-r: 14px;
+}
+
+.programs__paragraph-wrap {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 18px 15px 18px;
+  background-color: #ffffff;
+  border-radius: 0 12px 12px 12px;
+  align-items: center;
+}
+
+.programs__swiper-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 44px;
+  width: 30px;
+  height: 30px;
+  background-color: $additional-light-blue;
+
+  use {
+
+    stroke: $absolute-white;
+  }
+}
+
+.programs__button-wrap {
+  display: flex;
+  gap: 8px;
+}
+
+.programs__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 20px;
+  border: none;
+  background-color: transparent;
+
+  svg {
+    transform: rotate(45deg);
+  }
+
+  use {
+    stroke-width: 1.6;
+    stroke: $additional-light-blue;
+  }
+
+  &--prev {
+     svg {
+       transform: rotate(-135deg);
+     }
+   }
+}
+
+.programs__button[disabled] {
+
+  use {
+        stroke: #A9AFB7;
+  }
 }
 
 .programs__link {
+  padding: 16px 19px 16px 31px;
+  gap: 42px;
+}
+
+.programs__scrollbar.swiper-scrollbar {
+  height: 2px;
+  background-color: rgba($additional-light-blue, .2);
+  .swiper-scrollbar-drag {
+    background-color: $additional-light-blue;
+    border-radius: 0;
+  }
 }

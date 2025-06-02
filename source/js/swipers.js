@@ -1,6 +1,7 @@
 import Swiper from 'swiper';
 
-import { Pagination } from 'swiper/modules';
+import { Navigation, Pagination, Scrollbar } from 'swiper/modules';
+
 
 export const swiperHero = new Swiper('.hero__swiper.swiper', {
   modules: [Pagination],
@@ -22,8 +23,36 @@ export const swiperHero = new Swiper('.hero__swiper.swiper', {
       updateMainText(this);
       updatePropertyNebo(this);
     },
-
   }
+});
+
+export const swiperPrograms = new Swiper('.programs__swiper.swiper', {
+  modules: [Navigation, Scrollbar],
+  loop: false,
+
+  navigation: {
+    nextEl: '.programs__button.programs__button--next',
+    prevEl: '.programs__button.programs__button--prev',
+  },
+
+  scrollbar: {
+    el: '.swiper-scrollbar',
+    hide: true,
+  },
+
+  breakpoints: {
+    336: {
+      slidesPerView: 1
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 30
+    },
+    1366: {
+      slidesPerView: 3,
+      spaceBetween: 32,
+    }
+  },
 });
 
 
@@ -49,4 +78,5 @@ function updatePropertyNebo(index) {
     paragraphWrap.style.setProperty('--nb-h', ' 92px');
   }
 }
+
 

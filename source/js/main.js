@@ -1,11 +1,10 @@
-import { swiperHero } from './hero-swiper';
+import { swiperHero } from './swipers';
+import { swiperPrograms } from './swipers';
 
 const buttonElement = document.querySelector('.hero__menu-button');
 const listElement = document.querySelector('.hero__list');
 const heroElement = document.querySelector('.hero__inner-wrap');
 const heroItems = listElement.querySelectorAll('.hero__item');
-const heroMenu = document.querySelector('.hero__menu');
-
 
 buttonElement.addEventListener('click', (evt) => {
   evt.stopPropagation();
