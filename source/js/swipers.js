@@ -14,16 +14,16 @@ export const swiperHero = new Swiper('.hero__swiper.swiper', {
       return `<button class="${className}" type="button" ></button>`;
     },
   },
-  on: {
-    init: function () {
-      updateMainText(this);
-      updatePropertyNebo(this);// чтобы текст обновился при старте
-    },
-    slideChangeTransitionEnd: function () {
-      updateMainText(this);
-      updatePropertyNebo(this);
-    },
-  }
+  // on: {
+  //   init: function () {
+  //     updateMainText(this);
+  //     updatePropertyNebo(this);// чтобы текст обновился при старте
+  //   },
+  //   slideChangeTransitionEnd: function () {
+  //     updateMainText(this);
+  //     updatePropertyNebo(this);
+  //   },
+  // }
 });
 
 export const swiperPrograms = new Swiper('.programs__swiper.swiper', {

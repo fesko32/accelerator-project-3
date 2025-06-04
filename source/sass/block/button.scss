@@ -2,7 +2,6 @@
   display: inline-flex;
   justify-content: flex-start;
   align-items: center;
-
   font-weight: 500;
   font-size: 12px;
   line-height: 100%;
@@ -16,12 +15,19 @@
   position: relative;
   background-color: transparent;
   transition: 0.3s ease;
+
   svg {
+    transition: 0.3s ease;
     flex-shrink: 0;
+    position: relative;
+    z-index: 1;
   }
 
   use {
     stroke: $absolute-white;
+    stroke-width: 0.8;
+    position: relative;
+
   }
   @include vp-768 {
     font-size: 14px;
@@ -38,88 +44,55 @@
     border-radius: 100%;
     right: 5px;
     transition: 0.3s ease;
-    z-index: -1;
+    z-index: 0;
+  }
 
-    @include vp-768 {
-      width: 46px;
-      height: 46px;
-      top: 4px;
-      right: 4px;
-    }
-  }
-  svg::after {
-    position: absolute;
-  }
 
 
   &:hover {
     background-color: $additional-light-blue;
     color: $absolute-white;
   }
-  &:hover::before {
-     background-color: $absolute-white;
-  }
 
-  &:hover::after {
-    background-color: $additional-light-blue;
+  &:hover svg {
     transform: rotate(45deg);
+  }
+  &:hover use {
+    stroke: $additional-light-blue;
+  }
+  &:hover::after {
+    background-color: $absolute-white;
   }
 
   &:focus {
     outline: none;
+    background-color: transparent;
+    color: $additional-light-blue;
   }
 
-  &:focus::before {
-    background-color: $additional-light-blue;
-  }
-
-   &:focus::after {
-    background-color: $absolute-white;
+  &:focus svg {
     transform: rotate(45deg);
   }
 
   &:active {
-    background-color: $additional-light-blue;
+    outline: none;
     color: rgba($absolute-white, .7);
+    background-color: $additional-light-blue;
   }
 
-  &:active::before{
-    background-color: $absolute-white;
+  &:active use {
+    stroke: rgba($additional-light-blue, .7);
+
   }
 
-  &:active::after{
-    background-color: rgba($additional-light-blue, .7);
+  &:active svg {
     transform: rotate(45deg);
   }
 
-  &--disabled {
-    cursor: not-allowed;
-    color: $state-disabled;
-    border-color: $state-disabled;
-    background-color: transparent;
-
-    &::before {
-      background-color: $state-disabled;
-    }
-    &::after {
-      background-color: rgba($absolute-white, .6);
-    }
+  &:active::after {
+    background-color: $absolute-white;
   }
 
-  &--disabled:hover,
-  &--disabled:focus,
-  &--disabled:active {
-    cursor: not-allowed;
-    color: $state-disabled;
-    border-color: $state-disabled;
-    background-color: transparent;
-
-    &::before {
-      background-color: $state-disabled;
-    }
-    &::after {
-      background-color: rgba($absolute-white, .6);
-      transform: rotate(0deg);
-    }
-  }
 }
+
+
