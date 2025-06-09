@@ -1,6 +1,20 @@
 .about__inner-wrap {
-  padding-top: 50px;
+  padding-top: 51px;
   padding-bottom: 50px;
+
+  @include vp-768 {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+
+  }
+
+  @include vp-1440 {
+    column-gap: 30px;
+    row-gap: 61px;
+    padding-top: 70px;
+    padding-bottom: 60px;
+
+  }
 }
 
 .about__wrap-main-text {
@@ -10,46 +24,142 @@
     font-size: 16px;
     line-height: 137%;
     margin: 0;
+
+    @include vp-768 {
+      font-size: 20px;
+      line-height: 130%;
+    }
+
+    @include vp-1440 {
+      font-size: 22px;
+      line-height: 145%;
+    }
+  }
+
+  @include vp-768 {
+    grid-column: 1 / -1;
+    margin-bottom: 39px;
+  }
+
+  @include vp-1440 {
+    grid-column: 1 / 2;
+    margin-bottom: 0;
   }
 }
+
 .about__title {
   font-weight: 400;
   font-size: 20px;
   line-height: 100%;
   color: $additional-light-blue;
   margin: 0 0 15px 0;
+
+  @include vp-768 {
+    font-size: 34px;
+    line-height: 147%;
+    margin: 0 0 30px 0;
+  }
+
+  @include vp-1440 {
+    font-size: 50px;
+    line-height: 100%;
+    margin: 0px 0 31px 0;
+  }
 }
 .about__wrap-deskription {
-  margin-bottom: 40px;
+  margin-bottom: 39px;
 
   h3 {
     font-weight: 400;
     font-size: 18px;
     line-height: 122%;
+    margin: 0 0 19px 0;
     color: $additional-light-blue;
+
+    @include vp-768 {
+      font-size: 28px;
+      line-height: 100%;
+      margin: 0 0 30px 0;
+    }
+
+    @include vp-1440 {
+      font-size: 32px;
+      line-height: 112%;
+      margin: 1px 0 41px 0;
+    }
   }
 
   p {
     font-size: 14px;
     line-height: 143%;
-    margin: 0 0 30px;
+    margin: 0 0 29px;
+
+    @include vp-768 {
+      width: 490px;
+      font-size: 16px;
+      line-height: 125%;
+      margin: 0 0 41px 0;
+    }
+
+    @include vp-1440 {
+      width: 498px;
+      font-size: 16px;
+      line-height: 162%;
+      margin: -1px 0 51px 0;
+    }
+  }
+
+  @include vp-768 {
+    grid-column: 1 / -1;
+    margin-bottom: 61px;
+  }
+
+  @include vp-1440 {
+    grid-column: 2 / -1;
+    margin-bottom: 0;
   }
 }
 .about__list {
   display: flex;
   flex-direction: column;
-  gap: 21px;
-  padding: 40px 20px;
+  gap: 22px;
+  padding: 42px 20px 40px 20px;
   margin: 0;
   background-color: $additional-light-blue;
   border-radius: 20px;
+
+  @include vp-768 {
+    padding: 72px 50px 50px 70px;
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(2, 253px);
+    gap: 54px 52px;
+  }
+
+  @include vp-1440 {
+    padding: 72px 100px 49px 120px;
+    grid-template-columns: repeat(2, 484px);
+  }
 }
 .about__item {
   list-style: none;
   border: 1px solid $absolute-white;
   border-radius: 16px;
-  padding: 16px 21px;
+  padding: 16px 20px 15px 20px;
   position: relative;
+
+  @include vp-1440 {
+    padding: 40px 41px 41px 41px;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    align-items: center;
+  }
+
+  &--wt  {
+    @include vp-768 {
+      padding: 16px 16px 15px 20px;
+    }
+  }
 
   h4 {
     margin: 0 0 14px 0;
@@ -59,6 +169,27 @@
     line-height: 125%;
     letter-spacing: 0.01em;
     text-transform: uppercase;
+
+    @include vp-768 {
+      font-size: 20px;
+      line-height: 110%;
+    }
+
+    @include vp-1440 {
+      width: 201px;
+      font-size: 26px;
+      line-height: 115%;
+      margin: 0;
+      grid-column: 1 / 2;
+    }
+  }
+
+  &:not(:last-child) h4 br {
+    display: none;
+
+    @include vp-768 {
+      display: block;
+    }
   }
 
   p {
@@ -67,13 +198,31 @@
     font-weight: 300;
     font-size: 14px;
     line-height: 143%;
+
+    @include vp-768 {
+      font-size: 16px;
+      line-height: 125%;
+    }
+
+    @include vp-1440 {
+      grid-column: 2 / -1;
+    }
+  }
+
+  p br {
+    display: none;
+    @include vp-768 {
+      display: block;
+    }
+
+
   }
 
   &::after {
     content: '';
     display: block;
     position: absolute;
-    top: -12px;
+    top: -13px;
     left: -9px;
     width: 18px;
     height: 22px;
@@ -93,10 +242,37 @@
     background-color: $additional-light-blue;
     z-index: 3;
   }
+
+  &:nth-child(2),
+  &:nth-child(3) {
+    @include vp-1440 {
+      padding: 30px 41px 30px 41px;
+    }
+  }
+
+  &:nth-child(3) p br {
+    @include vp-768 {
+      display: none;
+    }
+
+    @include vp-1440 {
+      display: block;
+    }
+  }
+
 }
 
 .about__link {
   padding: 16px 17px 16px 21px;
   gap: 33px;
 
+  use {
+    stroke-width: 1.6;
+  }
+  @include vp-768 {
+    gap: 48px;
+    font-size: 14px;
+    line-height: 100%;
+    padding: 19px 23px 19px 31px;
+  }
 }

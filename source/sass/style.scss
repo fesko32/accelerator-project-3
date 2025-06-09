@@ -2,10 +2,11 @@
 // ---------------------------------
 @import "vendor/normalize";
 @import "vendor/nebo";
-@import  'swiper/css';
-@import  'swiper/css/pagination';
+@import 'swiper/css';
+@import 'swiper/css/pagination';
 @import 'swiper/css/scrollbar';
 @import 'swiper/css/navigation';
+@import 'swiper/css/grid';
 
 // ---------------------------------
 
@@ -24,4 +25,6 @@
 @import "block/hero.scss";
 @import "block/about.scss";
 @import "block/programs.scss";
+@import "block/grant.scss";
+@import "block/news.scss";
 // ---------------------------------

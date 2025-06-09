@@ -45,6 +45,12 @@
     right: 5px;
     transition: 0.3s ease;
     z-index: 0;
+
+    @include vp-768 {
+      width: 46px;
+      height: 46px;
+      right: 3px;
+    }
   }
 
 

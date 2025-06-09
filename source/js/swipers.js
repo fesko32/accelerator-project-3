@@ -1,6 +1,6 @@
 import Swiper from 'swiper';
 
-import { Navigation, Pagination, Scrollbar } from 'swiper/modules';
+import { Navigation, Pagination, Scrollbar, Grid } from 'swiper/modules';
 
 
 export const swiperHero = new Swiper('.hero__swiper.swiper', {
@@ -36,8 +36,11 @@ export const swiperPrograms = new Swiper('.programs__swiper.swiper', {
   },
 
   scrollbar: {
-    el: '.swiper-scrollbar',
-    hide: true,
+    el: '.programs__scrollbar',
+    hide: false,
+    draggable: true,
+
+
   },
 
   breakpoints: {
@@ -45,15 +48,45 @@ export const swiperPrograms = new Swiper('.programs__swiper.swiper', {
       slidesPerView: 1
     },
     768: {
-      slidesPerView: 2,
-      spaceBetween: 30
+      slidesPerView: 'auto',
+      spaceBetween: 30,
     },
-    1366: {
+    1440: {
+      allowTouchMove: false,
       slidesPerView: 3,
       spaceBetween: 32,
     }
   },
 });
+
+
+export const swiperNews = new Swiper('.news__swiper.swiper', {
+  modules: [Navigation, Grid],
+  loop: false,
+  navigation: {
+    nextEl: '.news__button.news__button--next',
+    prevEl: '.news__button.news__button--prev',
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      grid: {
+        rows: 2,
+        fill: 'column',
+      },
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+      grid: {
+        rows: 2,
+        fill: 'row',
+      },
+    },
+  }
+});
+
 
 
 function updateMainText(swiper) {

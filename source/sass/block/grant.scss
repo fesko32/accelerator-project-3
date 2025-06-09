@@ -1,0 +1,206 @@
+.grant {
+  background-color: $additional-light-blue;
+}
+.grant__inner-wrap {
+  padding-top: 70px;
+  padding-bottom: 70px;
+
+  @include vp-768 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @include vp-1440 {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(4, auto);
+    column-gap: 138px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    justify-content: flex-start;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 143%;
+    color: $absolute-white;
+    margin: 0 0 30px 0;
+
+    @include vp-768 {
+      width: 498px;
+      font-size: 16px;
+      line-height: 125%;
+      margin: 0 0 40px;
+    }
+
+    @include vp-1440 {
+      font-size: 16px;
+      line-height: 162%;
+      margin: 0 0 39px;
+      grid-column: 1/ 2;
+    }
+  }
+}
+.grant__title {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 100%;
+  color: $absolute-white;
+  margin: 0 0 15px 0;
+
+  @include vp-768 {
+    font-size: 34px;
+    line-height: 147%;
+    margin: 0 0 29px 0;
+  }
+
+  @include vp-1440 {
+    font-size: 50px;
+    line-height: 100%;
+    margin: 0 0 31px 0;
+  }
+}
+
+.grant__image-wrap {
+
+  margin: 0 0 41px 0;
+
+  picture {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  @include vp-768 {
+    margin: 0 0 50px 0;
+  }
+
+  @include vp-1440 {
+    grid-column: 1/ 2;
+    margin: 0 0 49px 0;
+  }
+
+}
+
+.grant__image {
+  display: block;
+  object-fit: contain;
+  border-radius: 18px;
+}
+.grant__list-wrap {
+  grid-column: 2 / 3;
+  grid-row: 1 / -1;
+}
+
+.grant__list-subtitle {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 122%;
+  margin: 0 0 29px 0;
+  color: $absolute-white;
+
+  @include vp-768 {
+    font-size: 28px;
+    line-height: 100%;
+    margin: 0px 0 45px 0;
+  }
+
+  @include vp-1440 {
+    width: 373px;
+    font-size: 32px;
+    line-height: 112%;
+    margin: 10px 0 55px 0;
+  }
+}
+.grant__list {
+  margin: 0;
+  padding: 0 0 0 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  counter-reset: process-list;
+
+  @include vp-768 {
+    display: grid;
+    gap: 25px 48px;
+    padding: 0 0 0 20px;
+    grid-template-columns: repeat(2, 305px);
+  }
+
+  @include vp-1440 {
+    grid-template-columns: 478px;
+    gap: 23px;
+  }
+}
+.grant__item {
+  line-height: 143%;
+  color: $absolute-white;
+  list-style: none;
+  padding: 24px 25px 24px 25px;
+  border: 1px solid $absolute-white;
+  border-radius: 16px;
+  position: relative;
+
+    @include vp-768 {
+      padding: 30px 25px;
+      font-size: 16px;
+      line-height: 125%;
+    }
+
+    @include vp-1440 {
+      line-height: 162%;
+    }
+
+
+  &:first-child::before {
+      left: -3px;
+
+      @include vp-768 {
+        left: -5px;
+      }
+  }
+
+
+
+
+  &::before {
+    display: block;
+    counter-increment: process-list;
+    content: counter(process-list);
+    position: absolute;
+    top: 1px;
+    left: -5px;
+    width: 11px;
+    height: 18px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    text-transform: uppercase;
+    z-index: 1;
+
+
+    @include vp-768 {
+      font-size: 22px;
+      line-height: 100%;
+      letter-spacing: 0.01em;
+      top: -6px;
+      left: -6px;
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: -6px;
+    width: 32px;
+    height: 32px;
+    background-color: $additional-light-blue;
+    z-index: 0;
+
+    @include vp-768 {
+
+      left: -12px;
+    }
+  }
+}

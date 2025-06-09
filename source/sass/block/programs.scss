@@ -1,38 +1,73 @@
 
 .programs__inner-wrap {
-  padding-top: 50px;
+  padding-top: 48px;
   padding-bottom: 50px;
+
+  @include vp-768 {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+
+  }
+
+  @include vp-1440 {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 
-.programs__title-wrap {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 0 34px 0;
-}
-.container {
-}
+
+
 .programs__title {
+  font-weight: 400;
   font-size: 20px;
   line-height: 100%;
   color: $additional-light-blue;
-  margin: 0;
+   margin: 0 0 34px 0;
+
+  @include vp-768 {
+    font-size: 34px;
+    line-height: 147%;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    justify-self: start;
+    align-self: start;
+    margin: 0 0 42px 0;
+  }
+
+  @include vp-1440 {
+    font-size: 50px;
+    line-height: 100%;
+    margin: 0 0 45px 0;
+  }
 }
+
 .programs__swiper {
-  margin: 0 0 30px 0;
+  position: relative;
+  margin: -70px 0 30px 0;
+  padding-top: 70px;
+
+  @include vp-768 {
+    grid-column: 1 / -1;
+    grid-row: 2/ 3;
+    padding-bottom: 56px;
+    margin: 0px 0 0px 0;
+    padding-top: 0px;
+    margin-right: -45px;
+  }
+
+  @include vp-1440 {
+    margin-right: 0;
+  }
 }
-.swiper {
-}
+
 .programs__swiper-list {
+
   display: flex;
   padding: 0;
   margin: 0;
-
-
 }
-.swiper-wrapper {
-}
+
 .programs__swiper-item {
   display: flex;
   flex-direction: column;
@@ -44,8 +79,22 @@
 
   @include vp-768 {
     min-height: 420px;
+    width: 324px;
   }
+
+  @include vp-1440 {
+    width: auto;
+  }
+
+
 }
+
+ .programs__paragraph-wrap.programs__paragraph-wrap--pg {
+    @include vp-1440 {
+      padding: 23px 18px 23px 18px;
+    }
+  }
+
 
 
 .programs__image-wrap {
@@ -56,6 +105,7 @@
 
 .programs__image {
   display:  block;
+  border-radius: 12px;
 }
 
 .swiper-slide {
@@ -68,6 +118,18 @@
   margin-left: 10px;
   z-index: 0;
   margin-right: 10px;
+
+  @include vp-768 {
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  @include vp-1440 {
+    margin-right: 51px;
+    margin-bottom: 18px;
+  }
+
   p {
     width: 175px;
     font-size: 12px;
@@ -75,6 +137,17 @@
     margin: 0;
     background-color: $absolute-white;
     border-radius: 0 12px 12px 12px;
+
+    @include vp-768 {
+      width: 195px;
+      font-size: 14px;
+      line-height: 143%;
+    }
+
+    @include vp-1440 {
+      width: 240px;
+      line-height: 129%;
+    }
   }
 }
 .programs__swiper-title {
@@ -89,6 +162,22 @@
     --nb-w: 95px;
     --nb-h: 13px;
     --nb-r: 14px;
+
+  @include vp-768 {
+    font-size: 20px;
+    line-height: 70%;
+    --nb-w: 83px;
+    --nb-h: 9px;
+    padding: 19px 18px 4px 18px;
+  }
+
+  @include vp-1440 {
+    font-size: 24px;
+    line-height: 71%;
+    padding: 19px 18px 5px 18px;
+    --nb-w: 99px;
+    --nb-h: 13px;
+  }
 }
 
 .programs__paragraph-wrap {
@@ -98,6 +187,11 @@
   background-color: #ffffff;
   border-radius: 0 12px 12px 12px;
   align-items: center;
+
+  @include vp-768 {
+    padding: 14px 18px 14px 18px;
+  }
+
 }
 
 .programs__swiper-link {
@@ -116,8 +210,23 @@
 }
 
 .programs__button-wrap {
+  position: absolute;
+  top: 15px;
+  right: 0;
   display: flex;
   gap: 8px;
+
+  @include vp-768 {
+    grid-column: 2 / -1;
+    grid-row: 1 / 2;
+    bottom: -5px;
+    right: 46px;
+    top: auto;
+  }
+
+  @include vp-1440 {
+    right: 1px;
+  }
 }
 
 .programs__button {
@@ -155,13 +264,38 @@
 .programs__link {
   padding: 16px 19px 16px 31px;
   gap: 42px;
+
+  @include vp-768 {
+    justify-self: end;
+    align-self: self-start;
+    transform: translate(0px, -4px);
+    margin: 0px 0 0 0;
+    padding: 20px 22px 20px 30px;
+    gap: 50px
+  }
 }
 
 .programs__scrollbar.swiper-scrollbar {
   height: 2px;
   background-color: rgba($additional-light-blue, .2);
+
+
+  @include vp-768 {
+    width: 562px;
+    margin-left: -6px;
+  }
+
+  @include vp-1440 {
+    width: 1136px;
+    margin-left: -12px;
+  }
   .swiper-scrollbar-drag {
     background-color: $additional-light-blue;
     border-radius: 0;
   }
+}
+
+
+.programs__scrollbar {
+
 }
