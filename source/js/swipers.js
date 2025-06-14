@@ -59,57 +59,115 @@ export const swiperPrograms = new Swiper('.programs__swiper.swiper', {
   },
 });
 
+let mySwiper = null;
 
-export const swiperNews = new Swiper('.news__swiper.swiper', {
-  modules: [Navigation, Grid],
-  loop: false,
-  navigation: {
-    nextEl: '.news__button.news__button--next',
-    prevEl: '.news__button.news__button--prev',
-  },
-  breakpoints: {
-    320: {
+function initSwiper() {
+  const isMobile = window.matchMedia('(max-width: 767px)').matches;
+  const isTablet = window.matchMedia('(min-width: 768px) and (max-width: 1439px)').matches;
+  const isDesktop = window.matchMedia('(min-width: 1440px)').matches;
+
+  // Уничтожаем предыдущий экземпляр Swiper, если он существует
+  if (mySwiper) {
+    mySwiper.destroy(true, true);
+    mySwiper = null;
+  }
+
+  // Настройки для разных устройств
+  let swiperSettings;
+
+  if (isMobile) {
+    swiperSettings = {
       slidesPerView: 1,
       spaceBetween: 20,
       grid: {
         rows: 2,
         fill: 'column',
       },
-    },
-    768: {
+    };
+  } else if (isTablet) {
+    swiperSettings = {
       slidesPerView: 2,
-      spaceBetween: 20,
+      slidesPerGroup: 2,
+      spaceBetween: 30,
       grid: {
         rows: 2,
         fill: 'row',
       },
-    },
+    };
+  } else if (isDesktop) {
+    swiperSettings = {
+      slidesPerView: 3,
+      spaceBetween: 32,
+      grid: {
+        rows: 1,
+      },
+    };
   }
+
+  // Инициализация нового экземпляра Swiper
+  mySwiper = new Swiper('.news__swiper.swiper', {
+    modules: [Navigation, Grid, Pagination],
+    loop: false,
+    speed: 400,
+    navigation: {
+      nextEl: '.news__button.news__button--next',
+      prevEl: '.news__button.news__button--prev',
+      disabledClass: 'news__button--disabled',
+    },
+    pagination: {
+      el: '.news__pagination',
+      clickable: true,
+      renderBullet: function (index, className) {
+        return `<button class="${className}" type="button">${index + 1}</button>`;
+      },
+    },
+    ...swiperSettings, // Распаковываем настройки для текущего устройства
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        grid: {
+          rows: 2,
+          fill: 'column',
+        },
+      },
+      768: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        spaceBetween: 30,
+        grid: {
+          rows: 2,
+          fill: 'row',
+        },
+      },
+      1440: {
+        slidesPerView: 'auto',
+        slidesPerGroup: 3,
+        spaceBetween: 32,
+        grid: {
+          rows: 1,
+        },
+      },
+    },
+    on: {
+      update: function () {
+        this.navigation.update();
+        this.pagination.update();
+      }
+    }
+  });
+}
+
+// Инициализация при загрузке
+document.addEventListener('DOMContentLoaded', () => {
+  initSwiper();
 });
 
-
-
-function updateMainText(swiper) {
-  const currentSlide = swiper.slides[swiper.activeIndex];
-  const title = currentSlide.querySelector('.hero__slide-title');
-  const desc = currentSlide.querySelector('.hero__paragraph-wrap > p');
-
-  if (title && desc) {
-    document.querySelector('.hero__main-slide-title').innerHTML = title.innerHTML;
-    document.querySelector('.hero__main-paragraph-wrap > p').innerHTML = desc.innerHTML;
-  }
-}
-
-function updatePropertyNebo(index) {
-  const realIndex = index.realIndex;
-  const paragraphWrap = document.querySelector('.hero__main-paragraph-wrap');
-
-
-  if (realIndex !== 0) {
-    paragraphWrap.style.setProperty('--nb-h', '74px');
-  } else {
-    paragraphWrap.style.setProperty('--nb-h', ' 92px');
-  }
-}
-
-
+// Оптимизация обработчика resize
+let resizeTimeout;
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(() => {
+    initSwiper();
+  }, 250);
+});

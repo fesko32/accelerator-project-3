@@ -744,25 +744,34 @@
         <h2 class="news__main-title">Новости и материалы</h2>
 
         <ul class="news__list-tabs">
-          <li class="news__item-tab news__item-tab--current-tab">Общее</li>
-          <li class="news__item-tab">Волонтёрство</li>
-          <li class="news__item-tab">Стажировки</li>
-          <li class="news__item-tab">Карьера</li>
-          <li class="news__item-tab">Путешествия</li>
+          <li class="news__item-tab">
+            <button class="news__button-tab news__button-tab--current-tab" type="button">Общее</button>
+          </li>
+          <li class="news__item-tab">
+            <button class="news__button-tab news__button-tab--vol" type="button">Волонтёрство</button>
+          </li>
+          <li class="news__item-tab">
+            <button class="news__button-tab" type="button">Стажировки</button></li>
+          <li class="news__item-tab">
+             <button class="news__button-tab" type="button">Карьера</button></li>
+          <li class="news__item-tab">
+            <button class="news__button-tab" type="button">Путешествия</button></li>
         </ul>
 
           <div class="news__swiper swiper">
               <ul class="news__list-swiper swiper-wrapper">
-                <li class="news-item-swiper news-item-swiper--enlarged swiper-slide">
+
+
+                <li class="news-item-swiper swiper-slide">
                   <div class="news__image-wrap">
                     <img class="news__image" src="img/news/news-1-mobile.jpg" width="290"
                     height="330" alt="">
                   </div>
                   <div class="news__text-wrap">
                     <time class="news__date nebo nebo--tr" datetime="2023-03-23">23/03/2023</time>
-                    <h3 class="news__title nebo nebo--tr">Интервью с участницей программы&nbsp;стажировки</h3>
+                    <h3 class="news__title news__title--width-md news__title--br-hidden nebo nebo--tr">Интервью <br>с участницей программы стажировки</h3>
                     <div class="news__paragraph-wrap nebo nebo--tr">
-                      <p>Саша рассказывает, как попала в программу и как прошла 6-месячная стажировка в ISOFound</p>
+                      <p>Саша рассказывает, <br>как попала в&nbsp;программу и&nbsp;как прошла 6-месячная стажировка в ISOFound</p>
                       <a class="news__swiper-link" href="#">
                         <svg width="8" height="8">
                           <use href="/__spritemap#sprite-arrow"></use>
@@ -771,9 +780,7 @@
                    </div>
                   </div>
                 </li>
-
-
-                <li class="news-item-swiper news-item-swiper--enlarged swiper-slide">
+                <li class="news-item-swiper news-item-swiper--nebo-travel swiper-slide">
                      <div class="news__image-wrap">
                     <img class="news__image" src="img/news/news-2-mobile.jpg" width="290"
                     height="330" alt="">
@@ -782,7 +789,7 @@
                     <time class="news__date nebo nebo--tr" datetime="2023-03-20">20/03/2023</time>
                     <h3 class="news__title nebo nebo--tr">Путешествуем по миру</h3>
                     <div class="news__paragraph-wrap nebo nebo--tr">
-                      <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
+                      <p>Какие места посещают наши студенты весной</p>
                       <a class="news__swiper-link" href="#">
                         <svg width="8" height="8">
                           <use href="/__spritemap#sprite-arrow"></use>
@@ -791,15 +798,14 @@
                    </div>
                   </div>
                 </li>
-
-                <li class="news-item-swiper swiper-slide">
+                <li class="news-item-swiper news-item-swiper--nebo-volunteer  swiper-slide">
                      <div class="news__image-wrap">
                     <img class="news__image" src="img/news/news-3-mobile.jpg" width="290"
                     height="330" alt="">
                   </div>
                   <div class="news__text-wrap">
                     <time class="news__date nebo nebo--tr" datetime="2023-03-17">17/03/2023</time>
-                    <h3 class="news__title nebo nebo--tr">Новая программа волонтёрства</h3>
+                    <h3 class="news__title nebo nebo--tr">Новая программа<br> волонтёрства</h3>
                     <div class="news__paragraph-wrap nebo nebo--tr">
                       <p>Программа помощи детям длительностью 4 месяца</p>
                       <a class="news__swiper-link" href="#">
@@ -810,7 +816,151 @@
                    </div>
                   </div>
                 </li>
+                <li class="news-item-swiper news-item-swiper--nebo-career swiper-slide">
+                     <div class="news__image-wrap">
+                    <img class="news__image" src="img/news/news-4-mobile.jpg" width="290"
+                    height="330" alt="">
+                  </div>
+                  <div class="news__text-wrap">
+                    <time class="news__date nebo nebo--tr" datetime="2023-03-10">10/03/2023</time>
+                    <h3 class="news__title nebo nebo--tr">Построй свою карьеру</h3>
+                    <div class="news__paragraph-wrap nebo nebo--tr">
+                      <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
+                      <a class="news__swiper-link" href="#">
+                        <svg width="8" height="8">
+                          <use href="/__spritemap#sprite-arrow"></use>
+                        </svg>
+                      </a>
+                   </div>
+                  </div>
+                </li>
                 <li class="news-item-swiper swiper-slide">
+                  <div class="news__image-wrap">
+                    <img class="news__image" src="img/news/news-1-mobile.jpg" width="290"
+                    height="330" alt="">
+                  </div>
+                  <div class="news__text-wrap">
+                    <time class="news__date nebo nebo--tr" datetime="2023-03-23">23/03/2023</time>
+                    <h3 class="news__title news__title--width-md news__title--br-hidden nebo nebo--tr">Интервью<br> с участницей программы стажировки</h3>
+                    <div class="news__paragraph-wrap nebo nebo--tr">
+                      <p>Саша рассказывает, <br>как попала в&nbsp;программу и&nbsp;как прошла 6-месячная стажировка в ISOFound</p>
+                      <a class="news__swiper-link" href="#">
+                        <svg width="8" height="8">
+                          <use href="/__spritemap#sprite-arrow"></use>
+                        </svg>
+                      </a>
+                   </div>
+                  </div>
+                </li>
+                <li class="news-item-swiper news-item-swiper--nebo-travel swiper-slide">
+                     <div class="news__image-wrap">
+                    <img class="news__image" src="img/news/news-2-mobile.jpg" width="290"
+                    height="330" alt="">
+                  </div>
+                    <div class="news__text-wrap">
+                    <time class="news__date nebo nebo--tr" datetime="2023-03-20">20/03/2023</time>
+                    <h3 class="news__title nebo nebo--tr">Путешествуем по миру</h3>
+                    <div class="news__paragraph-wrap nebo nebo--tr">
+                      <p>Какие места посещают наши студенты весной</p>
+                      <a class="news__swiper-link" href="#">
+                        <svg width="8" height="8">
+                          <use href="/__spritemap#sprite-arrow"></use>
+                        </svg>
+                      </a>
+                   </div>
+                  </div>
+                </li>
+                <li class="news-item-swiper news-item-swiper--nebo-volunteer  swiper-slide">
+                     <div class="news__image-wrap">
+                    <img class="news__image" src="img/news/news-3-mobile.jpg" width="290"
+                    height="330" alt="">
+                  </div>
+                  <div class="news__text-wrap">
+                    <time class="news__date nebo nebo--tr" datetime="2023-03-17">17/03/2023</time>
+                    <h3 class="news__title nebo nebo--tr">Новая программа<br> волонтёрства</h3>
+                    <div class="news__paragraph-wrap nebo nebo--tr">
+                      <p>Программа помощи детям длительностью 4 месяца</p>
+                      <a class="news__swiper-link" href="#">
+                        <svg width="8" height="8">
+                          <use href="/__spritemap#sprite-arrow"></use>
+                        </svg>
+                      </a>
+                   </div>
+                  </div>
+                </li>
+                <li class="news-item-swiper news-item-swiper--nebo-career swiper-slide">
+                     <div class="news__image-wrap">
+                    <img class="news__image" src="img/news/news-4-mobile.jpg" width="290"
+                    height="330" alt="">
+                  </div>
+                  <div class="news__text-wrap">
+                    <time class="news__date nebo nebo--tr" datetime="2023-03-10">10/03/2023</time>
+                    <h3 class="news__title nebo nebo--tr">Построй свою карьеру</h3>
+                    <div class="news__paragraph-wrap nebo nebo--tr">
+                      <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
+                      <a class="news__swiper-link" href="#">
+                        <svg width="8" height="8">
+                          <use href="/__spritemap#sprite-arrow"></use>
+                        </svg>
+                      </a>
+                   </div>
+                  </div>
+                </li>
+                <li class="news-item-swiper swiper-slide">
+                  <div class="news__image-wrap">
+                    <img class="news__image" src="img/news/news-1-mobile.jpg" width="290"
+                    height="330" alt="">
+                  </div>
+                  <div class="news__text-wrap">
+                    <time class="news__date nebo nebo--tr" datetime="2023-03-23">23/03/2023</time>
+                    <h3 class="news__title news__title--width-md news__title--br-hidden nebo nebo--tr">Интервью<br> с участницей программы стажировки</h3>
+                    <div class="news__paragraph-wrap nebo nebo--tr">
+                      <p>Саша рассказывает, <br>как попала в&nbsp;программу и&nbsp;как прошла 6-месячная стажировка в ISOFound</p>
+                      <a class="news__swiper-link" href="#">
+                        <svg width="8" height="8">
+                          <use href="/__spritemap#sprite-arrow"></use>
+                        </svg>
+                      </a>
+                   </div>
+                  </div>
+                </li>
+                <li class="news-item-swiper news-item-swiper--nebo-travel swiper-slide">
+                     <div class="news__image-wrap">
+                    <img class="news__image" src="img/news/news-2-mobile.jpg" width="290"
+                    height="330" alt="">
+                  </div>
+                    <div class="news__text-wrap">
+                    <time class="news__date nebo nebo--tr" datetime="2023-03-20">20/03/2023</time>
+                    <h3 class="news__title nebo nebo--tr">Путешествуем по миру</h3>
+                    <div class="news__paragraph-wrap nebo nebo--tr">
+                      <p>Какие места посещают наши студенты весной</p>
+                      <a class="news__swiper-link" href="#">
+                        <svg width="8" height="8">
+                          <use href="/__spritemap#sprite-arrow"></use>
+                        </svg>
+                      </a>
+                   </div>
+                  </div>
+                </li>
+                <li class="news-item-swiper news-item-swiper--nebo-volunteer  swiper-slide">
+                     <div class="news__image-wrap">
+                    <img class="news__image" src="img/news/news-3-mobile.jpg" width="290"
+                    height="330" alt="">
+                  </div>
+                  <div class="news__text-wrap">
+                    <time class="news__date nebo nebo--tr" datetime="2023-03-17">17/03/2023</time>
+                    <h3 class="news__title nebo nebo--tr">Новая программа<br> волонтёрства</h3>
+                    <div class="news__paragraph-wrap nebo nebo--tr">
+                      <p>Программа помощи детям длительностью 4 месяца</p>
+                      <a class="news__swiper-link" href="#">
+                        <svg width="8" height="8">
+                          <use href="/__spritemap#sprite-arrow"></use>
+                        </svg>
+                      </a>
+                   </div>
+                  </div>
+                </li>
+                <li class="news-item-swiper news-item-swiper--nebo-career swiper-slide">
                      <div class="news__image-wrap">
                     <img class="news__image" src="img/news/news-4-mobile.jpg" width="290"
                     height="330" alt="">
@@ -831,16 +981,172 @@
               </ul>
 
               <div class="news__button-wrap">
-                <button class="news__button news__button--prev"></button>
-                <button class="news__button news__button--next"></button>
+                <button class="news__button news__button--prev" type="button">
+                  <svg width="8" height="8">
+                      <use href="/__spritemap#sprite-arrow"></use>
+                    </svg>
+                </button>
+                <button class="news__button news__button--next" type="button">
+                  <svg width="8" height="8">
+                    <use href="/__spritemap#sprite-arrow"></use>
+                  </svg>
+                </button>
               </div>
               <div class="news__pagination"></div>
           </div>
       </div>
     </section>
-    <div data-test="FAQ">FAQ</div>
-    <div data-test="reviews">reviews</div>
-    <div data-test="contacts">contacts</div>
+    <section class="faq" data-test="FAQ">
+      <div class="faq__inner-wrap container">
+        <h2 class="faq__title">Вопросы и ответы</h2>
+        <ul class="faq__accordion-list">
+          <li class="faq__accordion-item ">
+            <h3 class="faq__accordion-title">Кто организатор? Какие сроки у программы?</h3>
+            <p>Организатором программы является проект «Стажировка» в сотрудничестве с образовательными учреждениями. Сроки программы обмена могут варьироваться от одного семестра до года.</p>
+            <button class="faq__accordion-button"></button>
+          </li>
+          <li class="faq__accordion-item">
+            <h3 class="faq__accordion-title">Что такое грант на обучение?</h3>
+            <p>Грант на обучение — это финансовая поддержка, которую предоставляет организатор программы обмена студентами для оплаты учебных расходов.</p>
+            <button class="faq__accordion-button"></button>
+          </li>
+          <li class="faq__accordion-item open">
+            <h3 class="faq__accordion-title">Как определяется стоимость программы?</h3>
+            <p>Полная стоимость определяется организаторами в зависимости от направления. В большинстве случаев грант «Стажировка» не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного участия.</p>
+            <button class="faq__accordion-button is-active"></button>
+          </li>
+          <li class="faq__accordion-item">
+            <h3 class="faq__accordion-title">Признаётся ли учёба в&nbsp;рамках проекта <br>для дальнейшего обучения?</h3>
+            <p>Студенты, участвующие в проекте, могут использовать полученные знания и навыки в своей будущей профессиональной деятельности или продолжить обучение в высших учебных заведениях. Кроме того, многие университеты и колледжи предоставляют кредиты за участие в программе обмена студентами.</p>
+            <button class="faq__accordion-button"></button>
+          </li>
+          <li class="faq__accordion-item">
+            <h3 class="faq__accordion-title">Как выглядит полный процесс регистрации на программу «Стажировка»?</h3>
+            <p>Процесс регистрации на программу обмена включает выбор университета-партнера и программы обмена, общение с координатором программы, заполнение заявления и предоставление необходимых документов, прохождение интервью, оформление визы, жилья и страховки, обучение по безопасности за границей и подписание договора об участии в программе. Подробнее можно узнать позвонив в центр.</p>
+            <button class="faq__accordion-button"></button>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="reviews" data-test="reviews">
+      <div class="reviews__inner-wrap container">
+        <h2 class="reviews__title">Отзывы</h2>
+        <div class="reviews__swiper swiper">
+
+        </div>
+        <ul class="reviews__list swiper-wrapper">
+          <li class="reviews__item swiper-slide">
+            <div class="reviews__author-wrap">
+               <picture></picture>
+              <h3 class="reviews__author">Лола Алекс</h3>
+            </div>
+            <dl class="reviews__data-wrap">
+              <div>
+                <dt>Программа</dt>
+                <dd>Masa Art Challenge</dd>
+              </div>
+
+              <div>
+                <dt>Дата</dt>
+                <dd>Осень 2022</dd>
+              </div>
+            </dl>
+
+            <p class="reviews__highlighted-paragraph">Я могу с уверенностью сказать, что это был один из самых незабываемых опытов в жизни!</p>
+            <p>Я рекомендую программу «Стажировка» всем студентам, желающим получить незабываемые впечатления. Сочетание путешествий, общения и значимой работы действительно отличает её от других программ, и я чувствую огромную благодарность за предоставленную мне возможность.</p>
+          </li>
+          <li class="reviews__item swiper-slide">
+            <div class="reviews__author-wrap">
+               <picture></picture>
+              <h3 class="reviews__author">Давид Иванов</h3>
+            </div>
+            <dl class="reviews__data-wrap">
+              <div>
+                <dt>Программа</dt>
+                <dd>Volunteer Chance</dd>
+              </div>
+
+              <div>
+                <dt>Дата</dt>
+                <dd>Лето 2022</dd>
+              </div>
+            </dl>
+
+            <p class="reviews__highlighted-paragraph">
+              Благодаря опыту стажировки я узнал так много нового о себе и об окружающем мире.
+            </p>
+            <p>Каждый день был возможностью оказать ощутимое влияние на жизнь других людей. Я бы очень рекомендовал эту волонтёрскую программу всем, кто ищет значимый и незабываемый опыт. Организация была на высшем уровне. Для меня было честью быть частью такой удивительной инициативы.</p>
+          </li>
+          <li class="reviews__item swiper-slide">
+            <div class="reviews__author-wrap">
+               <picture></picture>
+              <h3 class="reviews__author">Лола Алекс</h3>
+            </div>
+            <dl class="reviews__data-wrap">
+              <div>
+                <dt>Программа</dt>
+                <dd>Masa Art Challenge</dd>
+              </div>
+
+              <div>
+                <dt>Дата</dt>
+                <dd>Осень 2022</dd>
+              </div>
+            </dl>
+
+            <p class="reviews__highlighted-paragraph">Я могу с уверенностью сказать, что это был один из самых незабываемых опытов в жизни!</p>
+            <p>Я рекомендую программу «Стажировка» всем студентам, желающим получить незабываемые впечатления. Сочетание путешествий, общения и значимой работы действительно отличает её от других программ, и я чувствую огромную благодарность за предоставленную мне возможность.</p>
+          </li>
+          <li class="reviews__item swiper-slide">
+            <div class="reviews__author-wrap">
+               <picture></picture>
+              <h3 class="reviews__author">Давид Иванов</h3>
+            </div>
+            <dl class="reviews__data-wrap">
+              <div>
+                <dt>Программа</dt>
+                <dd>Volunteer Chance</dd>
+              </div>
+
+              <div>
+                <dt>Дата</dt>
+                <dd>Лето 2022</dd>
+              </div>
+            </dl>
+
+            <p class="reviews__highlighted-paragraph">
+              Благодаря опыту стажировки я узнал так много нового о себе и об окружающем мире.
+            </p>
+            <p>Каждый день был возможностью оказать ощутимое влияние на жизнь других людей. Я бы очень рекомендовал эту волонтёрскую программу всем, кто ищет значимый и незабываемый опыт. Организация была на высшем уровне. Для меня было честью быть частью такой удивительной инициативы.</p>
+          </li>
+        </ul>
+        <div class="reviews__scrollbar"></div>
+        <div class="reviews__button-wrap">
+
+        </div>
+      </div>
+    </section>
+    <section class="contacts" data-test="contacts">
+      <div class="contacts__inner-wrap container">
+        <h2 class="contacts__title">Контакты</h2>
+        <div class="contacts__info-row-wrap">
+          <h3 class="contacts__info-title"></h3>
+          <p class="contacts__paragraph"></p>
+        </div>
+        <div class="contacts__info-row-wrap">
+          <h3 class="contacts__info-title">Телефон</h3>
+          <a class="contacts__link" href="tel:+796387687676">+7 963 876 876 76</a>
+        </div>
+        <div class="contacts__info-row-wrap">
+          <h3 class="contacts__info-title">Email</h3>
+          <a class="contacts__link" href="mailto:Info@stazh.ru">Info@stazh.ru</a>
+        </div>
+
+        <div class="contacts__image-wrap">
+          <picture></picture>
+        </div>
+      </div>
+    </section>
     <div data-test="form">form</div>
     <div data-test="footer">footer</div>
     <script type="module" src="js/main.js"></script>

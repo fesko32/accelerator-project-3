@@ -1,6 +1,8 @@
 import { swiperHero } from './swipers';
 import { swiperPrograms } from './swipers';
 
+import { accardion } from './accardion.js';
+
 const buttonElement = document.querySelector('.hero__menu-button');
 const listElement = document.querySelector('.hero__list');
 const heroElement = document.querySelector('.hero__inner-wrap');
@@ -64,3 +66,4 @@ function closeAllSubmenus() {
 
 }
 
+accardion();
