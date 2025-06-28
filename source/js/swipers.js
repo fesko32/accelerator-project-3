@@ -158,6 +158,39 @@ function initSwiper() {
   });
 }
 
+export const swiperReviews = new Swiper('.reviews__swiper.swiper', {
+  modules: [Navigation, Scrollbar],
+  loop: false,
+
+  navigation: {
+    nextEl: '.reviews__button.reviews__button--next',
+    prevEl: '.reviews__button.reviews__button--prev',
+  },
+
+  scrollbar: {
+    el: '.reviews__scrollbar',
+    hide: false,
+    draggable: true,
+
+  },
+
+  breakpoints: {
+    336: {
+      slidesPerView: 1,
+      spaceBetween: 30,
+    },
+    768: {
+      slidesPerView: 'auto',
+      spaceBetween: 30,
+    },
+    1440: {
+      allowTouchMove: false,
+      slidesPerView: 3,
+      spaceBetween: 32,
+    }
+  },
+});
+
 // Инициализация при загрузке
 document.addEventListener('DOMContentLoaded', () => {
   initSwiper();

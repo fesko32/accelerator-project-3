@@ -24,7 +24,8 @@
 
   @include vp-1440 {
     font-size: 50px;
-    line-height: 100%
+    line-height: 100%;
+    margin: 0 0 71px 0;
   }
 
 }
@@ -55,6 +56,10 @@
       line-height: 125%;
     }
 
+    @include vp-1440 {
+
+      line-height: 162%;
+    }
 
   }
 }
@@ -75,26 +80,64 @@
 
   @include vp-1440 {
     width: 1028px;
+    padding: 44px 42px 42px 40px;
   }
 
   &:nth-child(4) .faq__accordion-button {
-    top: 31px;
+
+    @include vp-768 {
+      top: 31px;
+    }
+
+    @include vp-1440 {
+      top: 40px;
+      right: 40px;
+    }
   }
 
    &:nth-child(5) .faq__accordion-button {
-    top: 31px;
+
+    @include vp-768 {
+      top: 31px;
+    }
+
+     @include vp-1440 {
+      top: 40px;
+      right: 40px;
+    }
+
   }
 
    &:nth-child(3)  {
-    padding: 37px 30px 30px 30px;
+    @include vp-768 {
+      padding: 37px 30px 30px 30px;
+    }
+
+    @include vp-768 {
+      padding: 44px 30px 39px 40px;
+    }
   }
 
   &:nth-child(4) {
-    padding: 30px 30px;
+
+    @include vp-768 {
+      padding: 30px 30px;
+    }
+
+    @include vp-1440 {
+      padding: 40px 40px 41px 40px;
+    }
+
   }
 
    &:nth-child(5)  {
-    padding: 30px 30px;
+    @include vp-768 {
+      padding: 30px 30px;
+    }
+
+    @include vp-1440 {
+      padding: 40px 40px 40px 40px;
+    }
   }
 }
 
@@ -107,6 +150,10 @@
 
        @include vp-768 {
         margin: 0 0 26px 0;
+       }
+
+       @include vp-1440 {
+        margin: 0 0 23px 0;
        }
     }
 
@@ -145,6 +192,10 @@
     @include vp-768 {
       display: block;
     }
+
+    @include vp-1440 {
+      display: none;
+    }
   }
 }
 .faq__accordion-button {
@@ -162,6 +213,10 @@
     right: 30px;
   }
 
+  @include vp-1440 {
+    top: 40px;
+    right: 40px;
+  }
 
   &::before,
   &::after  {

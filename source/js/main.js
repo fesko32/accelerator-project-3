@@ -1,5 +1,6 @@
 import { swiperHero } from './swipers';
 import { swiperPrograms } from './swipers';
+import { swiperReviews } from './swipers';
 
 import { accardion } from './accardion.js';
 

@@ -1,0 +1,134 @@
+.reviews__inner-wrap {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.container {
+}
+.reviews__title {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+  margin: 0;
+  color: $additional-light-blue;
+
+  @include vp-768 {
+    font-size: 34px;
+    line-height: 147%;
+  }
+
+  @include vp-1440 {
+    font-size: 50px;
+    line-height: 100%;
+  }
+}
+.reviews__swiper {
+}
+.swiper {
+}
+.reviews__list {
+  margin: 0;
+  padding: 52px 0 0 0;
+}
+.swiper-wrapper {
+}
+.reviews__item {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  list-style: none;
+  padding: 32px 17px;
+  border: 2px solid $additional-light-blue;
+  border-radius: 16px;
+
+    p {
+      grid-column: 1 / -1;
+      margin: 0;
+      line-height: 143%;
+
+      @include vp-768 {
+        font-size: 16px;
+        line-height: 125%;
+      }
+
+      @include vp-1440 {
+        line-height: 162%;
+      }
+    }
+}
+.swiper-slide {
+}
+.reviews__author-wrap {
+  grid-column: 1 / -1;
+  margin: 0 0 15px 0;
+}
+.reviews__author {
+  width: 40px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 129%;
+  color: $additional-light-blue;
+  margin: 0;
+
+  @include vp-768 {
+    font-size: 20px;
+    line-height: 120%;
+  }
+
+  @include vp-1440  {
+    font-size: 18px;
+    line-height: 133%;
+  }
+}
+.reviews__data-wrap {
+  display: flex;
+  grid-column: 1 / -1;
+  gap: 25px;
+
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+  dt {
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: $additional-light-blue;
+  }
+
+  dd {
+    margin: 0;
+    font-size: 12px;
+    line-height: 117%;
+    opacity: 0.9;
+
+    @include vp-768 {
+      font-size: 14px;
+      line-height: 143%;
+    }
+
+    @include vp-1440 {
+      line-height: 129%;
+    }
+  }
+
+}
+.reviews__highlighted-paragraph {
+  grid-column: 1 / -1;
+  font-size: 16px;
+  line-height: 112%;
+  color: $additional-light-blue;
+
+  @include vp-768 {
+    font-size: 20px;
+    line-height: 120%;
+  }
+
+  @include vp-1440 {
+    font-size: 24px;
+    line-height: 108%;
+  }
+}
+.reviews__scrollbar {
+}
+.reviews__button-wrap {
+}
