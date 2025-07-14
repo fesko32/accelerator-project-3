@@ -185,7 +185,7 @@ export const swiperReviews = new Swiper('.reviews__swiper.swiper', {
     },
     1440: {
       allowTouchMove: false,
-      slidesPerView: 3,
+      slidesPerView: 2,
       spaceBetween: 32,
     }
   },
