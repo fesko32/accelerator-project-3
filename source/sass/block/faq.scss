@@ -73,6 +73,7 @@
   height: auto;
   min-height: 84px;
   cursor: pointer;
+  transition: 0.3s ease;
 
   @include vp-768 {
     padding: 37px 30px;

@@ -11,7 +11,7 @@ const accardion = () => {
 
     clickedItem.classList.toggle('open');
     if (button) {
-      button.classList.toggle('is-active')
+      button.classList.toggle('is-active');
     }
   });
 };

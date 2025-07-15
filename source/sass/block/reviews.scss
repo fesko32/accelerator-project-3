@@ -2,8 +2,7 @@
   padding-top: 50px;
   padding-bottom: 50px;
 }
-.container {
-}
+
 .reviews__title {
   font-weight: 400;
   font-size: 20px;
@@ -134,6 +133,7 @@
     line-height: 133%;
   }
 }
+
 .reviews__data-wrap {
   display: flex;
   grid-column: 1 / -1;
@@ -163,6 +163,7 @@
       gap: 10px;
     }
   }
+
   dt {
     font-size: 12px;
     line-height: 100%;
@@ -216,7 +217,6 @@
   height: 2px;
   background-color: rgba($additional-light-blue, .2);
 
-
   @include vp-768 {
     display: block;
     width: 562px;
@@ -232,6 +232,7 @@
     border-radius: 0;
   }
 }
+
 .reviews__button-wrap {
   position: absolute;
   top: 15px;
